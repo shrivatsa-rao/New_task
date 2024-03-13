@@ -1,0 +1,9 @@
+_format_version: "1.0"
+patches:
+  - _selectors:
+      - _$.services[*]:
+          values:
+            hosts: https://api.testtracker.xyz
+            port: 443
+            name: Billing_service
+            protocol: https
