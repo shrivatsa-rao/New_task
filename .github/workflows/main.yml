@@ -22,9 +22,9 @@ jobs:
  
       - name: Generate Kong Configurations
         run: |
-            deck file openapi2kong -s ../../Billing/billing.yaml |
-            deck file patch Billing/patches.yaml |
-            deck file add-tags -o ../../Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
+            deck file openapi2kong -s ./Billing/billing.yaml |
+            deck file patch ./Billing/patches.yaml |
+            deck file add-tags -o ./Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
  
       - name: Merge Kong Configurations
         run: deck file merge Output/kong-billing.yaml -o Merging/kong-combined.yaml
