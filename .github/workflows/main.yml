@@ -43,6 +43,6 @@ jobs:
         run: deck file merge Output/kong-billing.yaml -o Merging/kong-combined.yaml
  
       - name: Sync Kong Configurations
-        run: deck gateway sync --konnect-addr https://us.api.konghq.com --konnect-token kpat_X2fMboQP4nsJ2iEbRN952UZq6eawhxArtjrNfRwm4xfwvZp5v --konnect-control-plane-name Shrivatsa-CP kong-combined.yaml
+        run: deck gateway sync --konnect-addr https://us.api.konghq.com --konnect-token kpat_X2fMboQP4nsJ2iEbRN952UZq6eawhxArtjrNfRwm4xfwvZp5v --konnect-control-plane-name Shrivatsa-CP Merging/kong-combined.yaml
         # deck gateway sync --konnect-addr https://us.api.konghq.com --tls-skip-verify -s Merging/kong-combined.yaml --select-tag billing
  
