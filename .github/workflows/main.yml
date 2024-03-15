@@ -9,12 +9,15 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
- 
+    # permissions:
+    #   contents: read
+    #   packages: write
+    #   id-token: write
     steps:
+      - name: Checkout Code  # Checkout the code from the repository
+        uses: actions/checkout@v2
+ 
+    
       - name: Download Deck CLI
         run: |
             curl -sL https://github.com/kong/deck/releases/download/v1.35.0/deck_1.35.0_linux_amd64.tar.gz -o deck.tar.gz
@@ -31,7 +34,7 @@ jobs:
         run: |
             pwd
             ls
-            deck file openapi2kong -s Billing/billing.yaml |
+            deck file openapi2kong -s /Billing/billing.yaml |
             deck file patch /home/runner/work/New_task/New_task/Billing/patches.yaml | 
             deck file add-tags -o /home/runner/work/New_task/New_task/Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
 
