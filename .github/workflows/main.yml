@@ -28,7 +28,7 @@ jobs:
         run: |
             pwd
             ls
-            deck file openapi2kong -s ./Billing/billing.yaml |
+            deck file openapi2kong -s ./Billing/*.yaml |
             deck file patch ./Billing/patches.yaml | 
             deck file add-tags -o ./Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
 
