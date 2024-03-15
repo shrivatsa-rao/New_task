@@ -25,7 +25,7 @@ jobs:
         run:  deck gateway ping --konnect-token kpat_X2fMboQP4nsJ2iEbRN952UZq6eawhxArtjrNfRwm4xfwvZp5v --konnect-addr https://us.api.konghq.com --tls-skip-verify
         
       - name: Debug - List files in Billing directory
-        run: ls -l Billing/
+        run: ls 
         
       - name: Generate Kong Configurations
         run: |
