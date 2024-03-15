@@ -35,8 +35,8 @@ jobs:
             pwd
             ls
             deck file openapi2kong -s Billing/billing.yaml |
-            deck file patch /home/runner/work/New_task/New_task/Billing/patches.yaml | 
-            deck file add-tags -o /home/runner/work/New_task/New_task/Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
+            deck file patch Billing/patches.yaml | 
+            deck file add-tags -o Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
 
  
       - name: Merge Kong Configurations
