@@ -1,0 +1,1733 @@
+openapi: 3.0.1
+info:
+  title: Billing_service
+  version: v1
+servers:
+  - url: https://api.testtracker.xyz
+paths:
+  /billing/Billing/CostComponent:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/CostComponent/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/CostComponentSlabType:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/CostComponentSlabType/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TenantCostComponentMap/LookUp:
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentLookUp'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentLookUp'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentLookUp'
+  /billing/Billing/TenantCostComponentMap:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TenantCostComponentMap/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: boolean
+            application/json:
+              schema:
+                type: boolean
+            text/json:
+              schema:
+                type: boolean
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategory:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategory/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategory/SetDefault:
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: query
+          schema:
+            type: integer
+            format: int64
+        - name: VehichleTypeID
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TenantCostComponentSlab:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TenantCostComponentSlab/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategoryCostComponentMap:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategoryCostComponentMap/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategory_CostComponent_SlabAmt:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/BillCategory_CostComponent_SlabAmt/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TripBill/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBill'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBill'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBill'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TripBill:
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TripBillDetail:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/TripBillDetail/{ID}:
+    delete:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Tv2.BillingService.DTOS.TripBillDetail'
+      responses:
+        '200':
+          description: Success
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/PackageBillMonthly:
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: Year
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Month
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: VendorID
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: TransportMode
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/PackageBillDaily:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: day
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Year
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Month
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: VendorID
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: vehicleID
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: TransportMode
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/WipeOutDataForTenant:
+    post:
+      tags:
+        - Billing
+      parameters:
+        - name: tenantID
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+              nullable: true
+          text/json:
+            schema:
+              type: array
+              items:
+                type: string
+              nullable: true
+          application/*+json:
+            schema:
+              type: array
+              items:
+                type: string
+              nullable: true
+      responses:
+        '200':
+          description: Success
+  /billing/Billing/GetAuditLog:
+    get:
+      tags:
+        - Billing
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: pageNumber
+          in: query
+          schema:
+            type: integer
+            format: int32
+        - name: Facilityid
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    Tv2.BillingService.DTOS.CostComponent:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        tag:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.CostComponentSlabType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          nullable: true
+        systemTypeName:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.Enums.CostType:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        id:
+          type: integer
+          format: int32
+          readOnly: true
+      additionalProperties: false
+    Tv2.BillingService.Enums.CalculationType:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        id:
+          type: integer
+          format: int32
+          readOnly: true
+      additionalProperties: false
+    Tv2.BillingService.Enums.AggregationType:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        id:
+          type: integer
+          format: int32
+          readOnly: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TenantCostComponentLookUp:
+      type: object
+      properties:
+        costComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+          nullable: true
+        costTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Enums.CostType'
+          nullable: true
+        calculationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Enums.CalculationType'
+          nullable: true
+        aggregationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Enums.AggregationType'
+          nullable: true
+        slabTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponentSlabType'
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.CostComponentTable:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        tag:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TenantCostComponentSlab:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tenant_CCMapID:
+          type: integer
+          format: int64
+        costComponentID:
+          type: string
+          nullable: true
+        costComponentSlabTypeID:
+          type: integer
+          format: int64
+        tenantID:
+          type: string
+          nullable: true
+        rangeStart:
+          type: number
+          format: float
+        rangeEnd:
+          type: number
+          format: float
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TenantCostComponentMap:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tenantID:
+          type: string
+          nullable: true
+        costComponentID:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        costType:
+          type: integer
+          format: int32
+        costCalculationType:
+          type: integer
+          format: int32
+        aggregationType:
+          type: integer
+          format: int32
+        isDeleted:
+          type: boolean
+        facilityID:
+          type: string
+          nullable: true
+        transportMode:
+          type: integer
+          format: int32
+        costcomponent:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.CostComponentTable'
+        slabs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TenantCostComponentDetail:
+      type: object
+      properties:
+        costComponent:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.CostComponent'
+        tenantCostComponent:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentMap'
+        tenantCostComponentSlab:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentSlab'
+          nullable: true
+        isUsedInBilling:
+          type: boolean
+      additionalProperties: false
+    Tv2.BillingService.DTOS.CustomResponse.TenantCostComponentDetail:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: array
+          items:
+            type: string
+          nullable: true
+        result:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.TenantCostComponentDetail'
+        exception:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.BillCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          nullable: true
+        vehicleTypeID:
+          type: string
+          nullable: true
+        isDefault:
+          type: boolean
+        tenantID:
+          type: string
+          nullable: true
+        isDeleted:
+          type: boolean
+        facilityID:
+          type: string
+          nullable: true
+        currentRevisionID:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.CostComponentSlabTypeTable:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          nullable: true
+        systemTypeName:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.TenantCostComponentMapTable:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tenantID:
+          type: string
+          nullable: true
+        costComponentID:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        costType:
+          type: integer
+          format: int32
+        costCalculationType:
+          type: integer
+          format: int32
+        aggregationType:
+          type: integer
+          format: int32
+        transportMode:
+          type: integer
+          format: int32
+        isDeleted:
+          type: boolean
+        facilityID:
+          type: string
+          nullable: true
+        costcomponent:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.CostComponentTable'
+        slabs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentSlabTable'
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.TenantCostComponentSlabTable:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tenant_CCMapID:
+          type: integer
+          format: int64
+        costComponentID:
+          type: string
+          nullable: true
+        costComponentSlabTypeID:
+          type: integer
+          format: int64
+        tenantID:
+          type: string
+          nullable: true
+        rangeStart:
+          type: number
+          format: float
+        rangeEnd:
+          type: number
+          format: float
+        tenantCostComponentMap:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentMapTable'
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.BillCategoryCostComponentMapTable:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        billCategoryID:
+          type: integer
+          format: int64
+        vendorID:
+          type: string
+          nullable: true
+        tenant_CCMapID:
+          type: integer
+          format: int64
+        costComponentID:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: float
+        formula:
+          type: string
+          nullable: true
+        slabTypeID:
+          type: integer
+          format: int64
+        slabAmounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.BillCategory_CostComponent_SlabAmtTable'
+          nullable: true
+        tenantCostComponent:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentMapTable'
+        revisionID:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.Data.Entities.BillCategory_CostComponent_SlabAmtTable:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        bC_CC_MapID:
+          type: integer
+          format: int64
+        slabTypeID:
+          type: integer
+          format: int64
+        slabID:
+          type: integer
+          format: int64
+        amount:
+          type: number
+          format: float
+        formula:
+          type: string
+          nullable: true
+        billCategoryID:
+          type: integer
+          format: int64
+        slabRange:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentSlabTable'
+        billCategoryCostComponentMap:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.BillCategoryCostComponentMapTable'
+      additionalProperties: false
+    Tv2.BillingService.DTOS.BillCategoryCostComponentMap:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        billCategoryID:
+          type: integer
+          format: int64
+        vendorID:
+          type: string
+          nullable: true
+        tenant_CCMapID:
+          type: integer
+          format: int64
+        costComponentID:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: float
+        formula:
+          type: string
+          nullable: true
+        slabTypeID:
+          type: integer
+          format: int64
+        slabType:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.CostComponentSlabTypeTable'
+        slabAmounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.BillCategory_CostComponent_SlabAmtTable'
+          nullable: true
+        tenantCostComponent:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentMapTable'
+        revisionID:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        bC_CC_MapID:
+          type: integer
+          format: int64
+        slabTypeID:
+          type: integer
+          format: int64
+        slabID:
+          type: integer
+          format: int64
+        amount:
+          type: number
+          format: float
+        formula:
+          type: string
+          nullable: true
+        billCategoryID:
+          type: integer
+          format: int64
+        slabRange:
+          $ref: '#/components/schemas/Tv2.BillingService.Data.Entities.TenantCostComponentSlabTable'
+      additionalProperties: false
+    Tv2.BillingService.DTOS.BillCategoryCostComponentMapDetails:
+      type: object
+      properties:
+        billCategoryCostComponentMap:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMap'
+        slabAmounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory_CostComponent_SlabAmt'
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.BillCategoryDetails:
+      type: object
+      properties:
+        billCategory:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategory'
+        billCategoryCostComponentMapDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryCostComponentMapDetails'
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.CustomResponse.BillCategoryDetails:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: array
+          items:
+            type: string
+          nullable: true
+        result:
+          $ref: '#/components/schemas/Tv2.BillingService.DTOS.BillCategoryDetails'
+        exception:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TripBill:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tripID:
+          type: integer
+          format: int64
+        referenceNum:
+          type: string
+          nullable: true
+        totalAmount:
+          type: number
+          format: float
+        billingCategoryID:
+          type: integer
+          format: int64
+        travelDistance:
+          type: integer
+          format: int32
+        tripMembersCount:
+          type: integer
+          format: int32
+        vendorID:
+          type: string
+          nullable: true
+        tenantID:
+          type: string
+          nullable: true
+        fuelPrice:
+          type: number
+          format: float
+        vehicleID:
+          type: string
+          nullable: true
+        facilityID:
+          type: string
+          nullable: true
+        sequence:
+          type: integer
+          format: int32
+        auditStatus:
+          type: integer
+          format: int32
+        auditedBy:
+          type: string
+          nullable: true
+        auditorRemark:
+          type: string
+          nullable: true
+        auditDateTime:
+          type: string
+          format: date-time
+          nullable: true
+        checkedBy:
+          type: string
+          nullable: true
+        checkerRemark:
+          type: string
+          nullable: true
+        checkDateTime:
+          type: string
+          format: date-time
+          nullable: true
+        remarks:
+          type: string
+          nullable: true
+        shiftTime:
+          type: string
+          format: date-time
+          nullable: true
+        transportMode:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Tv2.BillingService.DTOS.TripBillDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        tripBillID:
+          type: integer
+          format: int64
+        billCategoryID:
+          type: integer
+          format: int64
+        bC_CC_MapID:
+          type: integer
+          format: int64
+        costComponentID:
+          type: string
+          nullable: true
+        slabID:
+          type: integer
+          format: int64
+        slabRange:
+          type: string
+          nullable: true
+        amount:
+          type: number
+          format: float
+        formula:
+          type: string
+          nullable: true
+        calcAmount:
+          type: number
+          format: float
+      additionalProperties: false
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      description: add consumer id in the header
+      name: X-API-KEY
+      in: header
+security:
+  - ApiKeyAuth: []
