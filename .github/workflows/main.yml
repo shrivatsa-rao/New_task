@@ -27,13 +27,10 @@ jobs:
       - name: Ping Kong Admin API
         run:  deck gateway ping --konnect-token kpat_X2fMboQP4nsJ2iEbRN952UZq6eawhxArtjrNfRwm4xfwvZp5v --konnect-addr https://us.api.konghq.com --tls-skip-verify
         
-      - name: Debug - List files in Billing directory
-        run: ls 
+
         
       - name: Generate Kong Configurations
         run: |
-            pwd
-            ls
             deck file openapi2kong -s Billing/billing.yaml |
             deck file patch Billing/patches.yaml | 
             deck file add-tags -o Output/kong-billing.yaml --selector "$.services[*]" --selector "$.services[*].routes[*]" billing
